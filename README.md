@@ -5,26 +5,27 @@ This project includes 2 tasks:
 
 **Terraform**
 
-To use Terraform, first check if it installed on your host. Run 'terraform -version' command on any platform. If it's not installed, you can install it 
-on Linux: sudo apt terraform --classic,
+To use Terraform, first check if it installed on your host. Run 'terraform -version' command on any platform. If it's not installed, you can install it      
+on Linux: sudo apt terraform --classic,                                                                                         
 on Windows - check this link https://learn.microsoft.com/en-us/azure/developer/terraform/get-started-windows-bash?tabs=bash
 
-Create AWS User and save its AWS_ACCESS_KEY, AWS_SECRET_ACCESS_KEY.
-Clone Git repository:
-git clone https://github.com/lana1010/Terraform-Python
+Create AWS User and save its AWS_ACCESS_KEY, AWS_SECRET_ACCESS_KEY.                                                           
+Clone Git repository:                                                   
+git clone https://github.com/lana1010/Terraform-Python                                        
 
 **Usage**
 
 1) Go to S3-manipulations folder: cd /Terraform/S3-manipulations
 
-2) Update file terraform.tfvars: change values for variables 'bucket_name' and 'location' for those that you need. Location is avalability zone that is more geographically close to you. Check availble zones here https://awsregion.info/ By default it set to 'location = us-east-1'.
+2) Update file terraform.tfvars: change values for variables 'bucket_name' and 'location' for those that you need. Location is an avalability zone that is more geographically close to you. Check availble zones here https://awsregion.info/ 
+By default it set to 'location = us-east-1'.                                                                                                     
 
 3) Set Environment Variables for current session:
     * Linux:   
-      export AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>
+      export AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>                    
       export AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
-    * Windows: 
-      set AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>
+    * Windows:                                    
+      set AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>           
       set AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
 4) Run terraform init
 
@@ -36,9 +37,9 @@ To verify the S3 bucket is created, go to AWS Console and check it exists with y
 
 **Python**
 
-To run successfully this script, verify if boto3 library is installed on your host. If not, install it on
-Linux: sudo apt install boto3
-Windows: pip install boto3
+To run successfully this script, verify if boto3 library is installed on your host. If not, install it on                                                  
+Linux: sudo apt install boto3                                                                                                                                                       
+Windows: pip install boto3                                                                                                                                                               
 
 Use the same AWS User's credentials.
 
