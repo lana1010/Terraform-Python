@@ -54,8 +54,9 @@ Use the same AWS User's credentials.
 
 4) Run Python script:                                                                            
    python s3_operations.py <bucket_name> --upload <file_paths> --delete <object_keys> --describe,                    
-   where <bucket_name> is your S3 bucket name, <file_paths> is one or more absolute path to the files to be uploaded, 
-         <object_keys> is one or more object/file names to be removed from the S3 bucket.
+   where <bucket_name> is your S3 bucket name,                                                   
+         <file_paths> is one or more absolute path to the files to be uploaded,                     
+         <object_keys> is one or more object/file names to be removed from the S3 bucket.               
 
 For example:                                                                                               
 python s3_operations.py lana-s3-test1 --upload index.html image.jpg notes.txt --delete notes.txt --describe
