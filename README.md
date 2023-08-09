@@ -1,11 +1,11 @@
 # Terraform-Python
 This project includes 2 tasks:
 * Terraform - creates AWS S3 bucket with no public access, with versioning turned off, and a bucket_name provided as a user's input.
-* Python - a python script that populates the bucket, able to delete these objects and describe them as well. The script takes 3 arguments: uploaded files, delete files, and description.
+* Python - a Python script that populates the bucket, able to delete these objects and describe them as well. The script takes 3 arguments: uploaded files, delete files, and description.
 
 **Terraform**
 
-To use Terraform, first check if it installed on your host. Run 'terraform -version' command on any platform. If it's not installed, you can install it      
+To use Terraform, first, check if it is installed on your host. Run the 'terraform -version' command on any platform. If it's not installed, you can install it      
 on Linux: sudo apt terraform --classic,                                                                                         
 on Windows - check this link https://learn.microsoft.com/en-us/azure/developer/terraform/get-started-windows-bash?tabs=bash
 
@@ -17,10 +17,10 @@ git clone https://github.com/lana1010/Terraform-Python
 
 1) Go to S3-manipulations folder: cd /Terraform/S3-manipulations
 
-2) Update file terraform.tfvars: change values for variables 'bucket_name' and 'location' for those that you need. Location is an avalability zone that is more geographically close to you. Check availble zones here https://awsregion.info/ 
-By default it set to 'location = us-east-1'.                                                                                                     
+2) Update file terraform.tfvars: change values for variables 'bucket_name' and 'location' for those that you need. Location is an availability zone that is geographically close to you. Check available zones here https://awsregion.info/ 
+By default, it is set to 'location = us-east-1'.                                                                                                     
 
-3) Set Environment Variables for current session:
+3) Set Environment Variables for the current session:
     * Linux:   
       export AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>                    
       export AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
@@ -45,12 +45,12 @@ Use the same AWS User's credentials.
 
 **Usage**
 
-1) Go to Python folder: cd /Python
+1) Go to the Python folder: cd /Python
 
 2) Set Environment Variables for the current session, see above.
 
-3) If you need to update AWS Region value, open file and change 'AWS_DAFAULT_REGION' value.                        
-   By default it's us-west-1.
+3) If you need to update the AWS Region value, open the s3_operations.py file, and change the 'AWS_DAFAULT_REGION' value.                        
+   By default, it's us-west-1.
 
 4) Run Python script:                                                                            
    python s3_operations.py <bucket_name> --upload <file_paths> --delete <object_keys> --describe,                    
