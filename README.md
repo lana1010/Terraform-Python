@@ -20,10 +20,12 @@ git clone https://github.com/lana1010/Terraform-Python
 2) Update file terraform.tfvars: change values for variables 'bucket_name' and 'location' for those that you need. Location is avalability zone that is more geographically close to you. Check availble zones here https://awsregion.info/ By default it set to 'location = us-east-1'.
 
 3) Set Environment Variables for current session:
-    * Linux:   export AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>
-               export AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
-    * Windows: set AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>
-               set AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
+    * Linux:   
+      export AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>
+      export AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
+    * Windows: 
+      set AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY>
+      set AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>
 4) Run terraform init
 
 5) Run terraform plan. Verify that the preliminary execution goes fine.
@@ -46,13 +48,13 @@ Use the same AWS User's credentials.
 
 2) Set Environment Variables for the current session, see above.
 
-3) If you need to update AWS Region value, open file and change 'AWS_DAFAULT_REGION' value. 
+3) If you need to update AWS Region value, open file and change 'AWS_DAFAULT_REGION' value.                        
    By default it's us-west-1.
 
-4) Run Python script: 
-   python s3_operations.py <bucket_name> --upload <file_paths> --delete <object_keys> --describe,
+4) Run Python script:                                                                            
+   python s3_operations.py <bucket_name> --upload <file_paths> --delete <object_keys> --describe,                    
    where <bucket_name> is your S3 bucket name, <file_paths> is one or more absolute path to the files to be uploaded, 
          <object_keys> is one or more object/file names to be removed from the S3 bucket.
 
-For example: 
+For example:                                                                                               
 python s3_operations.py lana-s3-test1 --upload index.html image.jpg notes.txt --delete notes.txt --describe
